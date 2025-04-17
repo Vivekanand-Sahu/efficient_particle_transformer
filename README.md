@@ -7,26 +7,28 @@ The **Particle Transformer (ParT)** architecture is described in "[Particle Tran
 ![arch](figures/arch.png)
 
 ## Attention Matrices: 
-The attention scores exhibit a binary (nearly 1/0) distribution, indicating that particles primarily attend to only one other particle. 
+The attention matrix shows how much each token (or input unit) attends to others. In transformers, attention is often spread out, but in well-trained models, you often see sparse or focused attention patterns. This sparsity can reflect learned dependencies, such as how words relate in a sentence or how objects interact in an image. Visualizing attention helps interpret model behavior and optimize computational efficiency by focusing only on significant interactions.
 
 ![image](https://github.com/user-attachments/assets/17ec9a88-755f-44ad-92d6-50cf5c5e44e2)
 
 ## Linformer ParT (LinParT):
-The mechanism approximates the full attention matrix using low-rank projections, reducing the attention space dimensions and complexity from O(n²) to O(n) for efficient long-sequence processing.
+Standard attention has quadratic complexity with respect to input length, which becomes costly for long sequences. Linformer tackles this by using low-rank projections, reducing attention computation to linear complexity. This allows Transformers to scale to large input sizes, such as long documents or detailed sequences, while consuming less memory and compute. It's a key innovation for making Transformers practical in real-time or resource-constrained scenarios.
 
 ![image](https://github.com/user-attachments/assets/eaa4d26c-3a36-4973-9e37-77245f70da4c)
 
 ## Int-8 Quantization:
-Int-8 Quantization reduces model size and speeds up computations by converting FP32 to INT8. 
+Int-8 quantization reduces model precision from 32-bit to 8-bit integers, enabling faster inference and smaller model size. This is especially helpful for deploying Transformers on mobile devices or edge hardware. By using quantization-aware training or calibration techniques, models retain most of their original accuracy while gaining significant performance benefits. It's a go-to technique for optimizing models without architectural changes.
 
 ![image](https://github.com/user-attachments/assets/3b156033-42f6-4a4d-a7e9-c08f6028419d)
 
 ## Flash Attention: 
-FlashAttention is a fast and memory-efficient algorithm for computing attention by fusing softmax and matrix ops to reduce memory reads/writes.
+FlashAttention is a faster implementation of scaled dot-product attention, reducing memory usage by minimizing redundant data movement between GPU and memory. It fuses operations like softmax and matrix multiplication, allowing much larger batch sizes and sequence lengths. This innovation is especially helpful for training large Transformers efficiently on GPUs, enabling higher throughput without hitting memory bottlenecks.
 
 <img width="621" alt="image" src="https://github.com/user-attachments/assets/348801e0-f489-4246-b4d4-01faaec04596" />
 
 ### Model Profiling:
+Profiling a Transformer involves examining each layer to identify performance bottlenecks—whether it’s attention layers, feedforward networks, or embedding operations. Profiling reveals if the model is memory-bound (slowed by data access) or compute-bound (limited by arithmetic operations). This guides optimization strategies like kernel fusion, quantization, or memory layout changes, ensuring smooth deployment across various hardware platforms.
+
 <img width="1073" alt="image" src="https://github.com/user-attachments/assets/ee7d61e5-f956-4274-b48a-9aafc9016862" />
 
 <img width="1073" alt="image" src="https://github.com/user-attachments/assets/a7e937f7-8140-4f17-994f-feb9661a0179" />
