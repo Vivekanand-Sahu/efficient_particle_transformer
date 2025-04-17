@@ -23,16 +23,19 @@ Int-8 Quantization reduces model size and speeds up computations by converting F
 
 ## Flash Attention: 
 FlashAttention is a fast and memory-efficient algorithm for computing attention by fusing softmax and matrix ops to reduce memory reads/writes.
+
 <img width="621" alt="image" src="https://github.com/user-attachments/assets/348801e0-f489-4246-b4d4-01faaec04596" />
 
 ### Model Profiling:
 <img width="1073" alt="image" src="https://github.com/user-attachments/assets/ee7d61e5-f956-4274-b48a-9aafc9016862" />
 
-<img width="927" alt="image" src="https://github.com/user-attachments/assets/9f7e2840-8efb-4692-9bfb-7c689914ada4" />
+<img width="1073" alt="image" src="https://github.com/user-attachments/assets/a7e937f7-8140-4f17-994f-feb9661a0179" />
 
-<img width="926" alt="image" src="https://github.com/user-attachments/assets/f4270e16-3a69-4b72-8e65-2d778e080cac" />
+<img width="1073" alt="image" src="https://github.com/user-attachments/assets/9f7e2840-8efb-4692-9bfb-7c689914ada4" />
 
-<img width="918" alt="image" src="https://github.com/user-attachments/assets/63a3824c-71d7-4770-89d8-e6d927090c5d" />
+<img width="1073" alt="image" src="https://github.com/user-attachments/assets/f4270e16-3a69-4b72-8e65-2d778e080cac" />
+
+<img width="1073" alt="image" src="https://github.com/user-attachments/assets/63a3824c-71d7-4770-89d8-e6d927090c5d" />
 
 
 ## Getting started
