@@ -26,19 +26,58 @@ FlashAttention is a faster implementation of scaled dot-product attention, reduc
 
 <img width="621" alt="image" src="https://github.com/user-attachments/assets/348801e0-f489-4246-b4d4-01faaec04596" />
 
-### Model Profiling:
+### Model Profiling and Results:
 Profiling a Transformer involves examining each layer to identify performance bottlenecks—whether it’s attention layers, feedforward networks, or embedding operations. Profiling reveals if the model is memory-bound (slowed by data access) or compute-bound (limited by arithmetic operations). This guides optimization strategies like kernel fusion, quantization, or memory layout changes, ensuring smooth deployment across various hardware platforms.
 
-<img width="1073" alt="image" src="https://github.com/user-attachments/assets/ee7d61e5-f956-4274-b48a-9aafc9016862" />
 
-<img width="1073" alt="image" src="https://github.com/user-attachments/assets/a7e937f7-8140-4f17-994f-feb9661a0179" />
+Base:
 
-<img width="1073" alt="image" src="https://github.com/user-attachments/assets/9f7e2840-8efb-4692-9bfb-7c689914ada4" />
+<img src="https://github.com/user-attachments/assets/8dce47a3-bd51-40d0-8bdb-46122e93a731" width="800"/>
 
-<img width="1073" alt="image" src="https://github.com/user-attachments/assets/f4270e16-3a69-4b72-8e65-2d778e080cac" />
 
-<img width="1073" alt="image" src="https://github.com/user-attachments/assets/63a3824c-71d7-4770-89d8-e6d927090c5d" />
+Quantized:
 
+<img src="https://github.com/user-attachments/assets/6a4a5e14-81b6-45ce-8077-929aa204da24" width="800"/>
+
+
+Base:
+
+<img src="https://github.com/user-attachments/assets/972bae55-d1fb-485a-afe5-1b8fa5c43451" width="800"/>
+
+
+Flash Attention:
+
+<img src="https://github.com/user-attachments/assets/883bde3a-49e7-4f6f-91f8-88a7af383fe2" width="800"/>
+
+
+Base:
+
+<img src="https://github.com/user-attachments/assets/0e86e45e-d6e0-41ff-9317-2ac03bdbf1a0" width="800"/>
+
+
+Optimized:
+
+<img src="https://github.com/user-attachments/assets/eb0c83b4-97ec-425a-92c8-3d92a21db2a7" width="800"/>
+
+
+Base:
+
+<img src="https://github.com/user-attachments/assets/8c4b3c90-8c6e-442c-b76e-7c498dc72fa9" width="800"/>
+
+
+Optimized:
+
+<img src="https://github.com/user-attachments/assets/6119b1eb-7669-47c7-9269-5ac1cf0c123d" width="800"/>
+
+
+Base:
+
+<img src="https://github.com/user-attachments/assets/18c84a3d-8347-449c-b824-dc89b57a4115" width="800"/>
+
+
+Optimized:
+
+<img src="https://github.com/user-attachments/assets/707e7c7c-e0b2-45c5-9781-5bff2fc80d3c" width="800"/>
 
 ## Getting started
 
