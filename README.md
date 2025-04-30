@@ -33,11 +33,14 @@ Profiling a Transformer involves examining each layer to identify performance bo
 Base:
 
 <img src="https://github.com/user-attachments/assets/8dce47a3-bd51-40d0-8bdb-46122e93a731" width="800"/>
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/f14e7d8c-6b8a-476f-bad7-f0d5772e5b99" />
+
 
 
 Quantized:
 
 <img src="https://github.com/user-attachments/assets/6a4a5e14-81b6-45ce-8077-929aa204da24" width="800"/>
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/db28fe5a-6a95-4f87-b99d-a1778df99754" />
 
 
 Base:
